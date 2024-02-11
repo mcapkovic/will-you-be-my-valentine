@@ -34,36 +34,45 @@ export default function Page() {
   };
 
   return (
-    <div className="-mt-16 flex h-screen flex-col items-center justify-center">
-      {yesPressed ? (
-        <>
-          <img src="https://media.tenor.com/gUiu1zyxfzYAAAAi/bear-kiss-bear-kisses.gif" />
-          <div className="my-4 text-4xl font-bold">Ok yay!!!</div>
-        </>
-      ) : (
-        <>
-          <img
+    <div className="py-32 h-screen bg-[size:30%] bg-[url('https://gifdb.com/images/high/big-heart-surrounded-by-more-hearts-wkgun7gbox8w66uu.gif')]">
+      <div className="flex h-full flex-col items-center justify-center bg-white ">
+        {yesPressed ? (
+          <>
+            <img src="https://media.tenor.com/gUiu1zyxfzYAAAAi/bear-kiss-bear-kisses.gif" />
+            <div className="my-4 text-4xl font-bold">Ok yay!!!</div>
+          </>
+        ) : (
+          <>
+            {/* <img
             className="h-[200px]"
             src="https://gifdb.com/images/high/cute-love-bear-roses-ou7zho5oosxnpo6k.gif"
-          />
-          <h1 className="my-4 text-4xl">Will you be my Valentine?</h1>
-          <div className="flex items-center">
-            <button
-              className={`mr-4 rounded bg-green-500 px-4 py-2 font-bold text-white hover:bg-green-700`}
-              style={{ fontSize: yesButtonSize }}
-              onClick={() => setYesPressed(true)}
-            >
-              Yes
-            </button>
-            <button
-              onClick={handleNoClick}
-              className=" rounded bg-red-500 px-4 py-2 font-bold text-white hover:bg-red-700"
-            >
-              {noCount === 0 ? "No" : getNoButtonText()}
-            </button>
-          </div>
-        </>
-      )}
+          /> */}
+            <img
+              className="h-[200px]"
+              src="https://gifdb.com/images/high/ghibli-kiki-s-flying-ux82qdv31k8gmo3b.gif"
+            />
+
+            <h1 className="my-4 text-4xl text-center">
+              Will you be my Valentine?
+            </h1>
+            <div className="flex items-center">
+              <button
+                className={`mr-4 rounded bg-green-500 px-4 py-2 font-bold text-white hover:bg-green-700`}
+                style={{ fontSize: yesButtonSize }}
+                onClick={() => setYesPressed(true)}
+              >
+                Yes
+              </button>
+              <button
+                onClick={handleNoClick}
+                className=" rounded bg-red-500 px-4 py-2 font-bold text-white hover:bg-red-700"
+              >
+                {noCount === 0 ? "No" : getNoButtonText()}
+              </button>
+            </div>
+          </>
+        )}
+      </div>
     </div>
   );
 }
